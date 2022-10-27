@@ -1,0 +1,2135 @@
+{
+	"info": {
+		"_postman_id": "97864e3b-fb6d-4a55-a2b9-f63a9cc2db4b",
+		"name": "Postman Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24089880"
+	},
+	"item": [
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "http://localhost:8080/Note/note/:categId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Implbm5pZmVyQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYzNWE3OTU0YjhkNzc0MmJmNzE5ZDczNSIsImlhdCI6MTY2Njg3NDM0MywiZXhwIjoxNjY2OTE3NTQzfQ.UdGhSqpBuH89A0Q9RxsR1j9gt_g9z2SLrj6akQxZGic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"My family\",\r\n    \"content\":\"Family is an important part of everyone’s life.\",\r\n    \"tags\":[\"family\",\"Home\",\"love\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Note/note/635a79b0b8d7742bf719d739",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"note",
+								"635a79b0b8d7742bf719d739"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Note created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Back to school\",\r\n    \"content\":\"I am happy to return to school. Distance learning was hard, working with computer caused pain for eyes and fingers. I could understand the online lessons, but it was easier when we had face-to-face meetings with the teacher. One more thing I am happy about is to see my friends, meet new teachers. If the lessons were distance again, we won't have a chance to get introduced with teachers. We have new teachers this year.\",\r\n    \"tags\":[\"school\",\"teachers\",\"friends\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Note/note/63598351587c6133787ec270",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"note",
+										"63598351587c6133787ec270"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "739"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e3-+pH/qBAT+QNl/4tJUvTCYZViiz4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 11:57:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"note created successfuly\",\n    \"note\": {\n        \"title\": \"Back to school\",\n        \"content\": \"I am happy to return to school. Distance learning was hard, working with computer caused pain for eyes and fingers. I could understand the online lessons, but it was easier when we had face-to-face meetings with the teacher. One more thing I am happy about is to see my friends, meet new teachers. If the lessons were distance again, we won't have a chance to get introduced with teachers. We have new teachers this year.\",\n        \"creator\": \"635981593b7bba40912949ec\",\n        \"category\": \"63598351587c6133787ec270\",\n        \"tags\": [\n            \"school\",\n            \"teachers\",\n            \"friends\"\n        ],\n        \"_id\": \"635a7210b8d7742bf719d707\",\n        \"createdAt\": \"2022-10-27T11:57:04.484Z\",\n        \"updatedAt\": \"2022-10-27T11:57:04.484Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Note/note/:noteId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NzQ2NzgsImV4cCI6MTY2NjkxNzg3OH0.V1Riaulq42GUNlxy6kXRoCuxzCSqSO873J7Y-OSHXVM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Lovely Homes !\",\r\n    \"content\":\"Visiting a friend’s house is my favourite pastime. It cements social relationship. Once, I happened to visit Sabir’s house. He is one of my dearest classmates and friends. He Invited me to his house on the occasion of his birthday. I gladly accepted his invitation.\",\r\n    \"tags\":[\"Birthday\",\"Home\",\"party\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Note/note/635a7904b8d7742bf719d72f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"note",
+								"635a7904b8d7742bf719d72f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Note updated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Lovely Homes !\",\r\n    \"content\":\"Visiting a friend’s house is my favourite pastime. It cements social relationship. Once, I happened to visit Sabir’s house. He is one of my dearest classmates and friends. He Invited me to his house on the occasion of his birthday. I gladly accepted his invitation.\",\r\n    \"tags\":[\"Birthday\",\"Home\",\"party\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Note/note/635a7904b8d7742bf719d72f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"note",
+										"635a7904b8d7742bf719d72f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "572"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23c-YdIlx7skvPUH1OR2rCFpGtjwgFQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 12:46:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note updated.\",\n    \"note\": {\n        \"_id\": \"635a7904b8d7742bf719d72f\",\n        \"title\": \"Lovely Homes !\",\n        \"content\": \"Visiting a friend’s house is my favourite pastime. It cements social relationship. Once, I happened to visit Sabir’s house. He is one of my dearest classmates and friends. He Invited me to his house on the occasion of his birthday. I gladly accepted his invitation.\",\n        \"creator\": \"635981593b7bba40912949ec\",\n        \"category\": \"635a7841b8d7742bf719d72b\",\n        \"tags\": [\n            \"Birthday\",\n            \"Home\",\n            \"party\"\n        ],\n        \"createdAt\": \"2022-10-27T12:26:44.803Z\",\n        \"updatedAt\": \"2022-10-27T12:46:59.241Z\",\n        \"__v\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Note/notes/:tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Note/notes/school",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"notes",
+								"school"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get notes by tag (ex 1)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Note/notes/school",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"notes",
+										"school"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1061"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"425-wMxns5MAQExZBFkk1Lnnq7RUFaw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 12:42:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fetched notes by this tag successfully.\",\n    \"notes\": [\n        {\n            \"title\": \"What's school ?\",\n            \"content\": \"School is the place where we learn to read and write. It is the most crucial place for a student, and it helps us to learn new things. The teachers are always helpful and teach us important things in life. We must always be regular to school as missing classes can lead to problems during exams.\",\n            \"creator\": {\n                \"name\": \"joelle\"\n            },\n            \"category\": {\n                \"title\": \"School\"\n            },\n            \"tags\": [\n                \"school\",\n                \"exams\",\n                \"student\",\n                \"classes\"\n            ]\n        },\n        {\n            \"title\": \"Back to school\",\n            \"content\": \"I am happy to return to school. Distance learning was hard, working with computer caused pain for eyes and fingers. I could understand the online lessons, but it was easier when we had face-to-face meetings with the teacher. One more thing I am happy about is to see my friends, meet new teachers. If the lessons were distance again, we won't have a chance to get introduced with teachers. We have new teachers this year.\",\n            \"creator\": {\n                \"name\": \"joelle\"\n            },\n            \"category\": {\n                \"title\": \"School\"\n            },\n            \"tags\": [\n                \"school\",\n                \"teachers\",\n                \"friends\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get notes by tag (ex 2)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Note/notes/Home",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"notes",
+										"Home"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "629"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"275-4IdNzuPgtFf6Yf2cCOYYXhBr4eo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 12:43:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fetched notes by this tag successfully.\",\n    \"notes\": [\n        {\n            \"title\": \"My family\",\n            \"content\": \"Family is an important part of everyone’s life.\",\n            \"creator\": {\n                \"name\": \"Jennifer\"\n            },\n            \"category\": {\n                \"title\": \"Family\"\n            },\n            \"tags\": [\n                \"family\",\n                \"Home\",\n                \"love\"\n            ]\n        },\n        {\n            \"title\": \"My sweet Home\",\n            \"content\": \"Visiting a friend’s house is my favourite pastime. It cements social relationship. Once, I happened to visit Sabir’s house. He is one of my dearest classmates and friends. He Invited me to his house on the occasion of his birthday. I gladly accepted his invitation.\",\n            \"creator\": {\n                \"name\": \"joelle\"\n            },\n            \"category\": {\n                \"title\": \"Home\"\n            },\n            \"tags\": [\n                \"friends\",\n                \"Home\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Note/note/:noteId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Note/note/635a77d3b8d7742bf719d722",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"note",
+								"635a77d3b8d7742bf719d722"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Note fetched",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Note/note/635a7210b8d7742bf719d707",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"note",
+										"635a7210b8d7742bf719d707"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "592"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"250-DVMlrtMy0PgOg7uUnzhRhCvPg+k\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 12:10:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note fetched.\",\n    \"note\": {\n        \"title\": \"Back to school\",\n        \"content\": \"I am happy to return to school. Distance learning was hard, working with computer caused pain for eyes and fingers. I could understand the online lessons, but it was easier when we had face-to-face meetings with the teacher. One more thing I am happy about is to see my friends, meet new teachers. If the lessons were distance again, we won't have a chance to get introduced with teachers. We have new teachers this year.\",\n        \"creator\": {\n            \"name\": \"joelle\"\n        },\n        \"category\": {\n            \"title\": \"School\"\n        },\n        \"tags\": [\n            \"school\",\n            \"teachers\",\n            \"friends\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Note/note/:noteId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Note/note/635a77d3b8d7742bf719d722",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"note",
+								"635a77d3b8d7742bf719d722"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Note deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Note/note/635a77d3b8d7742bf719d722",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Note",
+										"note",
+										"635a77d3b8d7742bf719d722"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-iImuHY/BAQ8meg7ZS6FFQFQkrlk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 12:50:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Delete note successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "http://localhost:8080/Categ/category/:categId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Categ/category/63598351587c6133787ec270",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"category",
+								"63598351587c6133787ec270"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Calegory deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category",
+										"635a5f5eb8d7742bf719d6f8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-Scd8xd6EVs3c3Ke9v2G/hVoKKTw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 11:48:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted calegory.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Categ/category/:categId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Categ/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category fetched",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category",
+										"635a5f5eb8d7742bf719d6f8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-G0nl6La18kBOV9bbPqiNnUmWljQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 11:35:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category fetched.\",\n    \"category\": {\n        \"title\": \"School\",\n        \"notes\": []\n    }\n}"
+						},
+						{
+							"name": "Category not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category",
+										"635a5f5eb8d7742bf719d6f9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-FSJKTEmqx83xv5AHCg8cLvcEJxQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 11:36:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"! Could not find category !\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Categ/category/:categId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"abcdefghijklmnopqrstuvwxyz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"category",
+								"635a5f5eb8d7742bf719d6f8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category updated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"School\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category",
+										"635a5f5eb8d7742bf719d6f8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-DflHzVsxGzNbVX9MYaH6se6t3NA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 10:42:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category updated.\",\n    \"category\": {\n        \"_id\": \"635a5f5eb8d7742bf719d6f8\",\n        \"title\": \"School\",\n        \"creator\": \"635981593b7bba40912949ec\",\n        \"notes\": [],\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Validation failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"abcdefghijklmnopqrstuvwxyz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Categ/category/635a5f5eb8d7742bf719d6f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category",
+										"635a5f5eb8d7742bf719d6f8"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-y2d2f4MZeSZQXqz9xOSVhTMJeH0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 10:49:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"!Validation failed, entered data is incorrect !\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/Categ/category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Implbm5pZmVyQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYzNWE3OTU0YjhkNzc0MmJmNzE5ZDczNSIsImlhdCI6MTY2Njg3MzcyOSwiZXhwIjoxNjY2OTE2OTI5fQ.Z7_X72eEDKzW4PdSQCc-KlhmeMwvjOS3YUTSSLL4Qvc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Family\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Categ/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Category created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Work\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Categ/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-wGBrD3eu/VbTw+EfiMAr2dHC8/Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 10:37:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully.\",\n    \"category\": {\n        \"title\": \"Work\",\n        \"creator\": \"635981593b7bba40912949ec\",\n        \"notes\": [],\n        \"_id\": \"635a5f5eb8d7742bf719d6f8\",\n        \"__v\": 0\n    },\n    \"creator\": {\n        \"_id\": \"635981593b7bba40912949ec\",\n        \"name\": \"joelle\"\n    }\n}"
+						},
+						{
+							"name": "Validation failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"CS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Categ/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Categ",
+										"category"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-kKpL3LIEWBpjh11NTM7Q3FqL1Qw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Oct 2022 10:38:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"! Validation failed, entered data is incorrect !\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/auth/signup",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"joelle\",\r\n    \"email\":\"joelle@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User created",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"joelle bayeh\",\r\n    \"email\":\"joellebayeh@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-b9FfOoU5bCDCQpwgMX8N+BYkvss\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 08:56:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created ...\",\n    \"userId\": \"635a47c03198818551c6ed76\"\n}"
+				},
+				{
+					"name": "Email already exists",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"joelle\",\r\n    \"email\":\"joelle@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"92-CJerW8T59xt/Bz3UPJ9ZOS6DmFI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 08:57:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Validation failed !\",\n    \"data\": [\n        {\n            \"value\": \"joelle@gmail.com\",\n            \"msg\": \"E-mail address already exists!\",\n            \"param\": \"email\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Validation failed",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"joelle\",\r\n    \"email\":\"joellegmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8e-+waVrHzHP4TGrbfEAkniprZM4iY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 10:27:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Validation failed !\",\n    \"data\": [\n        {\n            \"value\": \"joellegmail.com\",\n            \"msg\": \"Please enter a valid email.\",\n            \"param\": \"email\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"joelle@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login success + Create token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"joelle@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "260"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"104-Tg2OCZwObpVv2ROLpwvlIvemxgk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 08:58:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo\",\n    \"userId\": \"635981593b7bba40912949ec\"\n}"
+				},
+				{
+					"name": "Email not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"joellee@gmail.com\",\r\n    \"password\":\"joelle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-jL7mw3Er34d9FkVEX8cOhJ2ruBc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 08:59:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! A user with this email could not be found !\"\n}"
+				},
+				{
+					"name": "Wrong password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"joelle@gmail.com\",\r\n    \"password\":\"joelleee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-g9Ohb8HhATHnF89NyKWeA2wA+gw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 10:29:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Wrong password !\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Note authorized",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvZWxsZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MzU5ODE1OTNiN2JiYTQwOTEyOTQ5ZWMiLCJpYXQiOjE2NjY4NjExMTgsImV4cCI6MTY2NjkwNDMxOH0.vGJviMGwwVqSGeExq1KgE_wGe6wWT2LQTpdRlQySGMo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Categ/category/635a79b0b8d7742bf719d739",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Categ",
+						"category",
+						"635a79b0b8d7742bf719d739"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not authorized to delete note",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Note/note/635a7c08b8d7742bf719d74d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"note",
+								"635a7c08b8d7742bf719d74d"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-m9urSpaBOSVdPh1SOMcY4WNg24k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 12:52:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Not authorized !\"\n}"
+				},
+				{
+					"name": "Not authorized to delete category",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Categ/category/635a79b0b8d7742bf719d739",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"category",
+								"635a79b0b8d7742bf719d739"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-m9urSpaBOSVdPh1SOMcY4WNg24k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 12:53:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Not authorized !\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Not authenticated",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"work\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Note/note/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Note",
+						"note",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Not authenticated to get all categs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"work\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Categ/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categ",
+								"categories"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-q8hx85mbxXyjzrqa1JpA9tDo9UQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 10:33:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Not authenticated !\"\n}"
+				},
+				{
+					"name": "Not authenticated to get all notes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"work\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Note/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Note",
+								"notes"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-q8hx85mbxXyjzrqa1JpA9tDo9UQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Oct 2022 10:34:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"! Not authenticated !\"\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
@@ -8,18 +7,15 @@ const categorySchema = new Schema({
     required: true
   },
   creator: {
-    type: Schema.Type.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'User',
     required: true
   },
-  notes: {
-    items:[{
-        type: Schema.Type.ObjectId,
-        ref: 'Note',
-        required: true
-    }]
-  }
-
+  notes:[{
+      type: Schema.Types.ObjectId,
+      ref: 'Note',
+      dafault:[]
+  }]
 });
 
 module.exports = mongoose.model('Category', categorySchema);

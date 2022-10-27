@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  name: {
+  email: {
     type: String,
     required: true
   },
-  email: {
+  name: {
     type: String,
     required: true
   },
@@ -15,14 +14,11 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  categories: {
-    items:[{
-        type: Schema.Type.ObjectId,
-        ref: 'Category',
-        required: true
-    }]
-  }
-
+  categories:[{
+      type: Schema.Types.ObjectId,
+      ref: 'Category',
+      default:[]
+  }]
 });
 
 module.exports = mongoose.model('User', userSchema);
